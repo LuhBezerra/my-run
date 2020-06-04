@@ -1,7 +1,32 @@
+import { StyleSheet} from 'react-native';
+
 import styled from 'styled-components/native';
 import colors from '../../styles/colors';
 import fontWeight from '../../styles/fontsWeight';
 import fontsSize from '../../styles/fontsSize';
+
+
+export const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: colors.transparent,
+    position: 'absolute'
+  },
+
+  modal: {
+    bottom: 0,
+    position: 'absolute',
+    height: '40%',
+    width: '100%',
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    paddingLeft: 20,
+    paddingRight: 20,
+    justifyContent: 'space-around',
+    backgroundColor: colors.greyDarker,
+  },
+})
 
 export const Container = styled.View`
   width: 100%;

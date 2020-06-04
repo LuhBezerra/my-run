@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StatusBar } from 'react-native';
 import SwipeableBottomPanel from '../AlterPrice';
 import colors from '../../styles/colors';
@@ -19,6 +19,21 @@ import {
 } from './styles';
 
 export default function Home(){
+  const [modal, setModal] = useState(false);
+
+  const statusbar = () => {
+    if(modal == true){
+      <StatusBar backgroundColor={colors.transparent} barStyle="dark-content" />
+    }else{
+      <StatusBar backgroundColor={colors.greyRegular} barStyle="dark-content" />
+    }
+  }
+
+  const activeModal = () => {
+    setModal(true)
+    statusbar()
+  }
+
     return(
       <Container 
         showsVerticalScrollIndicator={false}
@@ -32,7 +47,7 @@ export default function Home(){
 
           <ValueText>R$ 0,00</ValueText>
           
-          <ButtonAlter>
+          <ButtonAlter onPress={() => activeModal()}>
             <ButtonAlterText>Alterar</ButtonAlterText>
           </ButtonAlter>
 
@@ -55,7 +70,9 @@ export default function Home(){
           </RunPanel>
         </RunContainer>
 
-        <SwipeableBottomPanel/>
+        <SwipeableBottomPanel
+          show={modal}
+          close={() => setModal(false)}/>
       </Container>
   );
 }
