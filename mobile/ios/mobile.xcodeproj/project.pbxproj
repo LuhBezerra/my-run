@@ -16,13 +16,13 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* mobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* mobileTests.m */; };
-		4BBCA05165E84109B0C627F3 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6ED9F2EF4454160B7AE104A /* Nunito-Black.ttf */; };
-		0528FD92B26148B2829F5C13 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 784BCEA1137C41D5BAFBA817 /* Nunito-Bold.ttf */; };
-		9F69B56FDC2046B98D80B76B /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC8D83D564A643A1A0D7CAE0 /* Nunito-ExtraBold.ttf */; };
-		175041E9F77B4F30A7C62C20 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FFD1FC5BBFB4AFA86F2CFDF /* Nunito-ExtraLight.ttf */; };
-		EB0E83E9079C406694D64E40 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F74776BAFB6B4BE8BE972CB9 /* Nunito-Light.ttf */; };
-		3ADD397DD8F54A5D9C7369B3 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D93105E5C21F41FD8C8F90D3 /* Nunito-Regular.ttf */; };
-		02095F6B8EB94580A00DF86F /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 805206B69D2949828FA23051 /* Nunito-SemiBold.ttf */; };
+		1D917F0998CF47A68F4B74BB /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88FF0A981B3B4A10AA227BE7 /* Nunito-Black.ttf */; };
+		F68145215157419FB49D6E5F /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98B7C796515642D4A865DE82 /* Nunito-Bold.ttf */; };
+		38F5D330927C4C26BB90B93E /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0328342083C6402885519C1B /* Nunito-ExtraBold.ttf */; };
+		6979CC7C806247E3B104C936 /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06E662F3C66A404B9881F152 /* Nunito-ExtraLight.ttf */; };
+		252B387A4AC84C9B95CE5326 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F83311B7BB1344EC933F5854 /* Nunito-Light.ttf */; };
+		C278A92AF1B84234BD23472C /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FE8308BB5C9423A9BC34035 /* Nunito-Regular.ttf */; };
+		D8352C50D7754B37935AB8CE /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3CCEF36BC04644B1A0C767CF /* Nunito-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,13 +58,13 @@
 		2D02E4901E0B4A5D006451C7 /* mobile-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mobile-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		C6ED9F2EF4454160B7AE104A /* Nunito-Black.ttf */ = {isa = PBXFileReference; name = "Nunito-Black.ttf"; path = "../assets/fonts/Nunito-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		784BCEA1137C41D5BAFBA817 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; name = "Nunito-Bold.ttf"; path = "../assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		EC8D83D564A643A1A0D7CAE0 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Nunito-ExtraBold.ttf"; path = "../assets/fonts/Nunito-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5FFD1FC5BBFB4AFA86F2CFDF /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Nunito-ExtraLight.ttf"; path = "../assets/fonts/Nunito-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F74776BAFB6B4BE8BE972CB9 /* Nunito-Light.ttf */ = {isa = PBXFileReference; name = "Nunito-Light.ttf"; path = "../assets/fonts/Nunito-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D93105E5C21F41FD8C8F90D3 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; name = "Nunito-Regular.ttf"; path = "../assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		805206B69D2949828FA23051 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; name = "Nunito-SemiBold.ttf"; path = "../assets/fonts/Nunito-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		88FF0A981B3B4A10AA227BE7 /* Nunito-Black.ttf */ = {isa = PBXFileReference; name = "Nunito-Black.ttf"; path = "../assets/fonts/Nunito-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		98B7C796515642D4A865DE82 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; name = "Nunito-Bold.ttf"; path = "../assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0328342083C6402885519C1B /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Nunito-ExtraBold.ttf"; path = "../assets/fonts/Nunito-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		06E662F3C66A404B9881F152 /* Nunito-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Nunito-ExtraLight.ttf"; path = "../assets/fonts/Nunito-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F83311B7BB1344EC933F5854 /* Nunito-Light.ttf */ = {isa = PBXFileReference; name = "Nunito-Light.ttf"; path = "../assets/fonts/Nunito-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7FE8308BB5C9423A9BC34035 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; name = "Nunito-Regular.ttf"; path = "../assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3CCEF36BC04644B1A0C767CF /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; name = "Nunito-SemiBold.ttf"; path = "../assets/fonts/Nunito-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +154,7 @@
 				00E356EF1AD99517003FC87E /* mobileTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				7A502B6610B84BF18B0EFB05 /* Resources */,
+				1A3DEEF7548149A1A3FB415B /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -172,16 +172,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7A502B6610B84BF18B0EFB05 /* Resources */ = {
+		1A3DEEF7548149A1A3FB415B /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				C6ED9F2EF4454160B7AE104A /* Nunito-Black.ttf */,
-				784BCEA1137C41D5BAFBA817 /* Nunito-Bold.ttf */,
-				EC8D83D564A643A1A0D7CAE0 /* Nunito-ExtraBold.ttf */,
-				5FFD1FC5BBFB4AFA86F2CFDF /* Nunito-ExtraLight.ttf */,
-				F74776BAFB6B4BE8BE972CB9 /* Nunito-Light.ttf */,
-				D93105E5C21F41FD8C8F90D3 /* Nunito-Regular.ttf */,
-				805206B69D2949828FA23051 /* Nunito-SemiBold.ttf */,
+				88FF0A981B3B4A10AA227BE7 /* Nunito-Black.ttf */,
+				98B7C796515642D4A865DE82 /* Nunito-Bold.ttf */,
+				0328342083C6402885519C1B /* Nunito-ExtraBold.ttf */,
+				06E662F3C66A404B9881F152 /* Nunito-ExtraLight.ttf */,
+				F83311B7BB1344EC933F5854 /* Nunito-Light.ttf */,
+				7FE8308BB5C9423A9BC34035 /* Nunito-Regular.ttf */,
+				3CCEF36BC04644B1A0C767CF /* Nunito-SemiBold.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -223,7 +223,7 @@
 			dependencies = (
 			);
 			name = mobile;
-			productName = mobile;
+			productName = "mobile";
 			productReference = 13B07F961A680F5B00A75B9A /* mobile.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -270,14 +270,12 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 940;
+				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
-					};
-					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -292,7 +290,7 @@
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "mobile" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -325,13 +323,13 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				4BBCA05165E84109B0C627F3 /* Nunito-Black.ttf in Resources */,
-				0528FD92B26148B2829F5C13 /* Nunito-Bold.ttf in Resources */,
-				9F69B56FDC2046B98D80B76B /* Nunito-ExtraBold.ttf in Resources */,
-				175041E9F77B4F30A7C62C20 /* Nunito-ExtraLight.ttf in Resources */,
-				EB0E83E9079C406694D64E40 /* Nunito-Light.ttf in Resources */,
-				3ADD397DD8F54A5D9C7369B3 /* Nunito-Regular.ttf in Resources */,
-				02095F6B8EB94580A00DF86F /* Nunito-SemiBold.ttf in Resources */,
+				1D917F0998CF47A68F4B74BB /* Nunito-Black.ttf in Resources */,
+				F68145215157419FB49D6E5F /* Nunito-Bold.ttf in Resources */,
+				38F5D330927C4C26BB90B93E /* Nunito-ExtraBold.ttf in Resources */,
+				6979CC7C806247E3B104C936 /* Nunito-ExtraLight.ttf in Resources */,
+				252B387A4AC84C9B95CE5326 /* Nunito-Light.ttf in Resources */,
+				C278A92AF1B84234BD23472C /* Nunito-Regular.ttf in Resources */,
+				D8352C50D7754B37935AB8CE /* Nunito-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,13 +527,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_BITCODE = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"FB_SONARKIT_ENABLED=1",
-				);
+				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = mobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -545,8 +538,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = mobile;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -555,7 +546,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = mobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -566,7 +556,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = mobile;
-				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -590,7 +579,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.mobile-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.mobile-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -617,7 +606,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.mobile-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.mobile-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -643,7 +632,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.mobile-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.mobile-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobile-tvOS.app/mobile-tvOS";
@@ -669,7 +658,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.mobile-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.mobile-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobile-tvOS.app/mobile-tvOS";
@@ -681,7 +670,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -725,12 +713,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
-					"\"$(inherited)\"",
-				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -741,7 +723,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -778,12 +759,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
-				LIBRARY_SEARCH_PATHS = (
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
-					"\"$(inherited)\"",
-				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
