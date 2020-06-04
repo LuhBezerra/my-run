@@ -1,5 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
+import SwipeableBottomPanel from '../AlterPrice';
 import colors from '../../styles/colors';
 import { 
   Container,
@@ -54,6 +55,7 @@ export default function Home(){
           </RunPanel>
         </RunContainer>
 
+        <SwipeableBottomPanel/>
       </Container>
   );
 }
