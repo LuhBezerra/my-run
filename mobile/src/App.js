@@ -4,7 +4,7 @@ import {
   StatusBar,
 } from 'react-native';
 
-import Home from './Home';
+import Home from './pages/Home';
 import colors from './styles/colors'
 
 const App: () => React$Node = () => {
