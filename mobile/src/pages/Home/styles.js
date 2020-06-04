@@ -6,8 +6,6 @@ import fontsSize from '../../styles/fontsSize';
 export const Container = styled.ScrollView`
   flex: 100%;
   background-color: ${colors.greyRegular};
-  padding-left: 15px;
-  padding-right: 15px;
 `;
 
 export const ValueContainer = styled.View`
@@ -50,6 +48,11 @@ export const ButtonAlterText = styled.Text`
 `;
 
 export const RunContainer = styled.View`
+  margin-left: 15px;
+  margin-right: 15px;
+`;
+
+export const RunPanel = styled.View`
   width: 100%;
   border-radius: 10px;
   align-self: center;
@@ -58,6 +61,7 @@ export const RunContainer = styled.View`
   padding-left: 20px;
   padding-right: 20px;
   background-color: ${colors.white};
+
 `;
 
 export const Output = styled.View`

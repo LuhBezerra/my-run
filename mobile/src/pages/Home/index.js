@@ -1,4 +1,6 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
+import colors from '../../styles/colors';
 import { 
   Container,
   ValueContainer,
@@ -7,6 +9,7 @@ import {
   ButtonAlter,
   ButtonAlterText,
   RunContainer,
+  RunPanel,
   Output,  
   OutputTitle,
   OutputText,
@@ -15,42 +18,43 @@ import {
 } from './styles';
 
 export default function Home(){
-  return(
-    <Container 
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}
-    >
-      <ValueContainer>
-
-        <ValueTitle>Valor por KM</ValueTitle>
-
-        <ValueText>R$ 0,00</ValueText>
+    return(
+      <Container 
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}
+      >
+        <StatusBar backgroundColor={colors.greyRegular} barStyle="dark-content" />
         
-        <ButtonAlter>
-          <ButtonAlterText>Alterar</ButtonAlterText>
-        </ButtonAlter>
+        <ValueContainer>
 
-      </ValueContainer>
+          <ValueTitle>Valor por KM</ValueTitle>
 
-      <RunContainer>
+          <ValueText>R$ 0,00</ValueText>
+          
+          <ButtonAlter>
+            <ButtonAlterText>Alterar</ButtonAlterText>
+          </ButtonAlter>
 
-        <OutputTitle>Distância percorrida:</OutputTitle>
-        <Output>
-          <OutputText>0.0 KM</OutputText>
-        </Output>
+        </ValueContainer>
 
-        <OutputTitle>Valor a  ser pago:</OutputTitle>
-        <Output>
-          <OutputText>R$ 0,00</OutputText>
-        </Output>
+        <RunContainer>
+          <RunPanel>
+            <OutputTitle>Distância percorrida:</OutputTitle>
+            <Output>
+              <OutputText>0.0 KM</OutputText>
+            </Output>
 
-        <ButtonInit>
-          <ButtonInitText>INICIAR CORRIDA</ButtonInitText>
-        </ButtonInit>
+            <OutputTitle>Valor a  ser pago:</OutputTitle>
+            <Output>
+              <OutputText>R$ 0,00</OutputText>
+            </Output>
+            <ButtonInit>
+              <ButtonInitText>INICIAR CORRIDA</ButtonInitText>
+            </ButtonInit>
+          </RunPanel>
+        </RunContainer>
 
-      
-      </RunContainer>
-    </Container>
+      </Container>
   );
 }
 
