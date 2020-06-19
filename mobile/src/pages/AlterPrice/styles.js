@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   },
 
   modal: {
-    bottom: 0,
+    bottom: 0,// faz o modal ficar em baixo
     position: 'absolute',
     height: '40%',
     width: '100%',
@@ -23,31 +23,11 @@ export const styles = StyleSheet.create({
     borderTopRightRadius: 30,
     paddingLeft: 20,
     paddingRight: 20,
+    paddingBottom: 20,
     justifyContent: 'space-around',
     backgroundColor: colors.greyDarker,
   },
 })
-
-export const Container = styled.View`
-  width: 100%;
-  height: 100%;
-  background-color: ${colors.transparent};
-  position: absolute;
-`;
-
-export const Panel = styled.View`
-  bottom: 0; /*envia o painel pra baixo*/
-  position: absolute;
-  height: 40%;
-  width: 100%;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-  justify-content: space-around;
-  background-color: ${colors.greyDarker};
-`;
-
 export const Indicador = styled.View`
   width: 50px;
   height: 5px;
@@ -57,7 +37,7 @@ export const Indicador = styled.View`
   background-color: ${colors.greyDark};
 `;
 
-export const Output = styled.View`
+export const Input = styled.View`
   width: 100%;
   height: 50px;
   border-radius: 10px;
@@ -66,11 +46,12 @@ export const Output = styled.View`
   background-color: #636363;
 `;
 
-export const OutputText = styled.TextInput`
+export const InputText = styled.TextInput`
   font-family: ${fontWeight.regular};
-  font-size: ${fontsSize.regular};
+  font-size: ${fontsSize.big};
   margin-left: 15px;
   margin-right: 15px;
+  color: ${colors.white}
 `;
 
 export const Button = styled.TouchableOpacity`

@@ -1,7 +1,8 @@
 import React from 'react';
+import 'intl';
+import 'intl/locale-data/jsonp/pt-BR';
 import {
   View,
-  StatusBar,
 } from 'react-native';
 
 import SplashScreen from 'react-native-splash-screen';

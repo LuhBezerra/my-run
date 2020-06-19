@@ -1,10 +1,19 @@
+import { StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 import colors from '../../styles/colors';
 import fontWeight from '../../styles/fontsWeight';
 import fontsSize from '../../styles/fontsSize';
 
-export const Container = styled.ScrollView`
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'pink',
+  },
+})
+
+export const Container = styled.View`
   flex: 100%;
+  justify-content: center;
   background-color: ${colors.greyRegular};
 `;
 

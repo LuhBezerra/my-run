@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { StyleSheet, StatusBar, Animated, Dimensions } from 'react-native';
+import { Animated, Dimensions, KeyboardAvoidingView, } from 'react-native';
 //import TextInputMask from 'react-native-text-input-mask';
 import colors from '../../styles/colors';
 import {
@@ -7,8 +7,8 @@ import {
   Container,
   Panel,
   Indicador,
-  Output,
-  OutputText,
+  Input,
+  InputText,
   Button,
   ButtonText,
 } from './styles';
@@ -21,12 +21,14 @@ const Modal = ({ show, close }) => {
     container: new Animated.Value(height),
     modal: new Animated.Value(height)
   });
+  
+  const [currentValue, setCurrentValue] = useState(0);
 
   const openModal = () => {
     Animated.sequence([
       Animated.timing(state.container, { toValue: 0, duration: 100 }),
       Animated.timing(state.opacity, { toValue: 1, duration: 300 }),
-      Animated.spring(state.modal, { toValue: 0, bounciness: 5, useNativeDriver: true })
+      Animated.spring(state.modal, { toValue: 15, bounciness: 5, useNativeDriver: true })
     ]).start()
   };
 
@@ -63,15 +65,15 @@ const Modal = ({ show, close }) => {
         }]}
       >
         <Indicador/>
-
-        <Output>
-          <OutputText 
-            placeholder={'R$: Insira aqui o novo valor'} 
+        <Input>
+          <InputText 
+            placeholder={'R$: Insira aqui o novo valor'}
+            onChangeText={(value)=> setCurrentValue(value) }
             placeholderTextColor={'#F0F0F0'}
             keyboardAppearance={"dark"}
-            keyboardType={"numeric"}
+            keyboardType={"number-pad"}
           />
-        </Output>
+        </Input>
 
         <Button onPress={close} >
           <ButtonText>Confirmar</ButtonText>
