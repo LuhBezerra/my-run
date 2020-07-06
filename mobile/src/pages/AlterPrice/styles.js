@@ -39,11 +39,13 @@ export const Indicador = styled.View`
 
 export const Input = styled.View`
   width: 100%;
-  height: 50px;
+  height: 60px;
   border-radius: 10px;
   margin-top: 20px;
   justify-content: center;
   background-color: #636363;
+  padding-left: 10px;
+  margin-bottom: 20px;
 `;
 
 export const InputText = styled.TextInput`
@@ -56,7 +58,7 @@ export const InputText = styled.TextInput`
 
 export const Button = styled.TouchableOpacity`
   width: 90%;
-  height: 50px;
+  height: 60px;
   border-radius: 10px;
   justify-content: center;
   align-items: center;

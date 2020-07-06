@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import { Animated, Dimensions, KeyboardAvoidingView, } from 'react-native';
-//import TextInputMask from 'react-native-text-input-mask';
-import colors from '../../styles/colors';
+
+import { TextInputMask } from 'react-native-masked-text'
+
+import fonts from '../../styles/fontsSize';
 import {
   styles,
-  Container,
-  Panel,
   Indicador,
   Input,
-  InputText,
   Button,
   ButtonText,
 } from './styles';
 
 const { height } = Dimensions.get('window');
+
+export let value;
 
 const Modal = ({ show, close }) => {
   const [state, setState] = useState({
@@ -24,11 +25,13 @@ const Modal = ({ show, close }) => {
   
   const [currentValue, setCurrentValue] = useState(0);
 
+  value = currentValue
+
   const openModal = () => {
     Animated.sequence([
       Animated.timing(state.container, { toValue: 0, duration: 100 }),
       Animated.timing(state.opacity, { toValue: 1, duration: 300 }),
-      Animated.spring(state.modal, { toValue: 15, bounciness: 5, useNativeDriver: true })
+      Animated.spring(state.modal, { toValue: 0, bounciness: 3, useNativeDriver: true })
     ]).start()
   };
 
@@ -66,13 +69,23 @@ const Modal = ({ show, close }) => {
       >
         <Indicador/>
         <Input>
-          <InputText 
+          <TextInputMask
             placeholder={'R$: Insira aqui o novo valor'}
-            onChangeText={(value)=> setCurrentValue(value) }
             placeholderTextColor={'#F0F0F0'}
+            style={{color: '#f0f0f0', fontSize: 20}}
             keyboardAppearance={"dark"}
             keyboardType={"number-pad"}
-          />
+            type={'money'}
+            options={{
+              precision: 2,
+              separator: ',',
+              delimiter: '.',
+              unit: 'R$ ',
+              suffixUnit: ''
+            }}
+            value={currentValue}
+            onChangeText={text => setCurrentValue(text)}
+            />
         </Input>
 
         <Button onPress={close} >

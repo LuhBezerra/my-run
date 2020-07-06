@@ -3,7 +3,6 @@ import { StatusBar, ScrollView, KeyboardAvoidingView, Dimensions } from 'react-n
 import SwipeableBottomPanel from '../AlterPrice';
 import colors from '../../styles/colors';
 import { 
-  Container,
   ValueContainer,
   ValueTitle,
   ValueText,
@@ -16,8 +15,9 @@ import {
   OutputText,
   ButtonInit,
   ButtonInitText,
-  styles,
 } from './styles';
+
+import { value } from '../AlterPrice'
 
 const {height: heightOfDeviceScreen} = Dimensions.get('window');
 
@@ -26,12 +26,14 @@ export default function Home(){
   const [valuePerKm, setValuePerKm] = useState(Intl.NumberFormat('pt-BR', 
     { style: 'currency', currency: 'BRL' }).format(0))
 
-  const activeModal = () => {
-    setModal(true)
+  const desactiveModal = () => {
+    setModal(false),
+    setValuePerKm(value)
   }
 
     return(
       <ScrollView
+        showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           flexGrow: 1, 
           justifyContent: "center", 
@@ -46,13 +48,12 @@ export default function Home(){
 
           <ValueText>{valuePerKm}</ValueText>
           
-          <ButtonAlter onPress={() => activeModal()}>
+          <ButtonAlter onPress={() => setModal(true)}>
             <ButtonAlterText>Alterar</ButtonAlterText>
           </ButtonAlter>
 
         </ValueContainer>
 
-        <KeyboardAvoidingView behavior="padding">
         <RunContainer>
           <RunPanel>
             <OutputTitle>Distância percorrida:</OutputTitle>
@@ -70,11 +71,10 @@ export default function Home(){
             </ButtonInit>
           </RunPanel>
         </RunContainer>
-        </KeyboardAvoidingView>
 
         <SwipeableBottomPanel
           show={modal}
-          close={() => setModal(false)}/>
+          close={() => desactiveModal()}/>
       </ScrollView>
   );
 }

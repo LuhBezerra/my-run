@@ -12,6 +12,7 @@
     "intl": "^1.2.5",
     "react": "16.8.1",
     "react-native": "0.61.0",
+    "react-native-masked-text": "^1.13.0",
     "react-native-splash-screen": "^3.2.0",
     "styled-components": "^5.1.1"
   },
