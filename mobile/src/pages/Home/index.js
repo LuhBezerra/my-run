@@ -16,19 +16,18 @@ import {
   ButtonInit,
   ButtonInitText,
 } from './styles';
-
-import { value } from '../AlterPrice'
+import { valueWithoutMask } from '../AlterPrice'
 
 const {height: heightOfDeviceScreen} = Dimensions.get('window');
 
 export default function Home(){
   const [modal, setModal] = useState(false);
-  const [valuePerKm, setValuePerKm] = useState(Intl.NumberFormat('pt-BR', 
-    { style: 'currency', currency: 'BRL' }).format(0))
+  const [valuePerKm, setValuePerKm] = useState("R$0,00")
 
   const desactiveModal = () => {
     setModal(false),
-    setValuePerKm(value)
+    setValuePerKm(Intl.NumberFormat('pt-BR', 
+    { style: 'currency', currency: 'BRL' }).format(valueWithoutMask))
   }
 
     return(

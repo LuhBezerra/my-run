@@ -4,6 +4,7 @@ import { Animated, Dimensions, KeyboardAvoidingView, } from 'react-native';
 import { TextInputMask } from 'react-native-masked-text'
 
 import fonts from '../../styles/fontsSize';
+import { rawValue } from './noMask'
 import {
   styles,
   Indicador,
@@ -14,7 +15,7 @@ import {
 
 const { height } = Dimensions.get('window');
 
-export let value;
+export let valueWithoutMask
 
 const Modal = ({ show, close }) => {
   const [state, setState] = useState({
@@ -23,9 +24,11 @@ const Modal = ({ show, close }) => {
     modal: new Animated.Value(height)
   });
   
-  const [currentValue, setCurrentValue] = useState(0);
+  const [currentValue, setCurrentValue] = useState("0");
 
-  value = currentValue
+  const value = currentValue
+
+  valueWithoutMask = rawValue(value)
 
   const openModal = () => {
     Animated.sequence([
@@ -78,8 +81,8 @@ const Modal = ({ show, close }) => {
             type={'money'}
             options={{
               precision: 2,
-              separator: ',',
-              delimiter: '.',
+              separator: '.',
+              delimiter: ' ',
               unit: 'R$ ',
               suffixUnit: ''
             }}
