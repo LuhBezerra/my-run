@@ -9,6 +9,8 @@ import SplashScreen from 'react-native-splash-screen';
 
 import Home from './pages/Home';
 
+import Run from './pages/Run'
+
 const App: () => React$Node = () => {
 
   SplashScreen.hide();

@@ -9,5 +9,9 @@ export default {
   yellow: '#FFC72C',
   yellowRegular: '#FBDA7D',
 
+  red: '#CB2020',
+
   transparent: 'rgba(0, 0, 0, 0.4)',
+  transparentDark: 'rgba(0, 0, 0, 0.55)',
+
 }

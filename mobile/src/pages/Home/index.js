@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { StatusBar, ScrollView, KeyboardAvoidingView, Dimensions } from 'react-native';
 import SwipeableBottomPanel from '../AlterPrice';
+import { valueWithoutMask } from '../AlterPrice';
+import ActiveRunPanel from '../Run'
 import colors from '../../styles/colors';
 import { 
   ValueContainer,
@@ -16,16 +18,17 @@ import {
   ButtonInit,
   ButtonInitText,
 } from './styles';
-import { valueWithoutMask } from '../AlterPrice'
 
 const {height: heightOfDeviceScreen} = Dimensions.get('window');
 
 export default function Home(){
-  const [modal, setModal] = useState(false);
+  const [modalAlterPrice, setModalAlterPrice] = useState(false);
+  const [modalRun, setModalRun] = useState(false);
+
   const [valuePerKm, setValuePerKm] = useState("R$0,00")
 
-  const desactiveModal = () => {
-    setModal(false),
+  const desactiveModalAlterPrice = () => {
+    setModalAlterPrice(false),
     setValuePerKm(Intl.NumberFormat('pt-BR', 
     { style: 'currency', currency: 'BRL' }).format(valueWithoutMask))
   }
@@ -47,7 +50,7 @@ export default function Home(){
 
           <ValueText>{valuePerKm}</ValueText>
           
-          <ButtonAlter onPress={() => setModal(true)}>
+          <ButtonAlter onPress={() => setModalAlterPrice(true)}>
             <ButtonAlterText>Alterar</ButtonAlterText>
           </ButtonAlter>
 
@@ -65,15 +68,20 @@ export default function Home(){
               <OutputText>R$ 0,00</OutputText>
             </Output>
 
-            <ButtonInit>
+            <ButtonInit onPress={() => setModalRun(true)}>
               <ButtonInitText>INICIAR CORRIDA</ButtonInitText>
             </ButtonInit>
           </RunPanel>
         </RunContainer>
 
         <SwipeableBottomPanel
-          show={modal}
-          close={() => desactiveModal()}/>
+          show={modalAlterPrice}
+          close={() => desactiveModalAlterPrice()}/>
+
+        <ActiveRunPanel
+          show={modalRun}
+          close={() => setModalRun(false)}
+        />
       </ScrollView>
   );
 }
