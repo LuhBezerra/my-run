@@ -34,7 +34,7 @@ const Modal = ({ show, close }) => {
     Animated.sequence([
       Animated.timing(state.container, { toValue: 0, duration: 100 }),
       Animated.timing(state.opacity, { toValue: 1, duration: 300 }),
-      Animated.spring(state.modal, { toValue: 0, bounciness: 3, useNativeDriver: true })
+      Animated.spring(state.modal, { toValue: 0, bounciness: 1, useNativeDriver: true })
     ]).start()
   };
 

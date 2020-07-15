@@ -13,6 +13,7 @@ import {
   ButtonAlterText,
   RunContainer,
   RunPanel,
+  RunPanelTitle,
   Output,  
   OutputTitle,
   OutputText,
@@ -45,8 +46,8 @@ export default function Home(){
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           flexGrow: 1, 
-          justifyContent: "center", 
-          height: heightOfDeviceScreen
+          justifyContent: "space-between", 
+          height: heightOfDeviceScreen-24,
         }}
         >
         <StatusBar backgroundColor={colors.greyRegular} barStyle="dark-content" />
@@ -65,22 +66,24 @@ export default function Home(){
 
         <RunContainer>
           <RunPanel>
-            <OutputTitle>Distância percorrida:</OutputTitle>
+            <RunPanelTitle>DADOS DA CORRIDA ANTERIOR</RunPanelTitle>
+
+            <OutputTitle style={{marginTop: 15}}>Distância percorrida:</OutputTitle>
             <Output>
               <OutputText>0.0 KM</OutputText>
             </Output>
 
-            <OutputTitle>Valor a  ser pago:</OutputTitle>
+            <OutputTitle>Valor cobrado:</OutputTitle>
             <Output>
               <OutputText>R$ 0,00</OutputText>
             </Output>
-
-            <ButtonInit onPress={() => setModalRun(true)}>
-              <ButtonInitText>INICIAR CORRIDA</ButtonInitText>
-            </ButtonInit>
           </RunPanel>
         </RunContainer>
 
+        <ButtonInit onPress={() => setModalRun(true)}>
+          <ButtonInitText>INICIAR CORRIDA</ButtonInitText>
+        </ButtonInit>
+      
         <SwipeableBottomPanel
           show={modalAlterPrice}
           close={() => desactiveModalAlterPrice()}/>
