@@ -3,6 +3,7 @@ import { StatusBar, ScrollView, KeyboardAvoidingView, Dimensions } from 'react-n
 import SwipeableBottomPanel from '../AlterPrice';
 import { valueWithoutMask } from '../AlterPrice';
 import ActiveRunPanel from '../Run'
+import RunFinished from '../RunFinished'
 import colors from '../../styles/colors';
 import { 
   ValueContainer,
@@ -23,7 +24,9 @@ const {height: heightOfDeviceScreen} = Dimensions.get('window');
 
 export default function Home(){
   const [modalAlterPrice, setModalAlterPrice] = useState(false);
+
   const [modalRun, setModalRun] = useState(false);
+  const [modalRunFinished, setModalRunFinished] = useState(false);
 
   const [valuePerKm, setValuePerKm] = useState("R$0,00")
 
@@ -33,6 +36,10 @@ export default function Home(){
     { style: 'currency', currency: 'BRL' }).format(valueWithoutMask))
   }
 
+  const closeRunPanel = () => {
+    setModalRun(false),
+    setModalRunFinished(true)
+  }
     return(
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -80,7 +87,12 @@ export default function Home(){
 
         <ActiveRunPanel
           show={modalRun}
-          close={() => setModalRun(false)}
+          close={() => closeRunPanel()}
+        />
+
+        <RunFinished
+          show={modalRunFinished}
+          close={() => setModalRunFinished(false)}
         />
       </ScrollView>
   );

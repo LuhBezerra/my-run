@@ -11,7 +11,10 @@ export default {
 
   red: '#CB2020',
 
-  transparent: 'rgba(0, 0, 0, 0.4)',
+  green: '#31BE00',
+  
+  transparentDarker: 'rgba(0, 0, 0, 0.8)',
   transparentDark: 'rgba(0, 0, 0, 0.55)',
+  transparent: 'rgba(0, 0, 0, 0.4)',
 
 }
