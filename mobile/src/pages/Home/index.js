@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
-import { StatusBar, ScrollView, KeyboardAvoidingView, Dimensions } from 'react-native';
+import { StatusBar, ScrollView, KeyboardAvoidingView, Dimensions, PermissionsAndroid } from 'react-native';
+import Geolocation from '@react-native-community/geolocation';
+
 import SwipeableBottomPanel from '../AlterPrice';
 import { valueWithoutMask } from '../AlterPrice';
 import ActiveRunPanel from '../Run'
 import RunFinished from '../RunFinished'
+import { LocationUser } from '../../services/currentLocation'
+
 import colors from '../../styles/colors';
 import { 
   ValueContainer,
@@ -31,6 +35,12 @@ export default function Home(){
 
   const [valuePerKm, setValuePerKm] = useState("R$0,00")
 
+  const [coordinates, setCoordinates] = useState({
+    latitude:0,
+    longitude: 0,
+    error: null
+  });
+
   const desactiveModalAlterPrice = () => {
     setModalAlterPrice(false),
     setValuePerKm(Intl.NumberFormat('pt-BR', 
@@ -41,6 +51,44 @@ export default function Home(){
     setModalRun(false),
     setModalRunFinished(true)
   }
+
+  const openRunPanel = () => {
+    requestLocationPermission(),
+    console.log(coordinates)
+  }
+  const requestLocationPermission = async () => {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        {
+          title: "Permissão para acessar o local do dispositivo",
+          message:
+            "My Run precisa acessar a sua localização" +
+            " só assim poderá medir a quilometragem.",
+          buttonNegative: "Cancelar",
+          buttonPositive: "OK"
+        }
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        Geolocation.getCurrentPosition(position => setCoordinates({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+          error: null
+        }), error => setCoordinates({ error: error.message }),
+          {
+            enableHighAccuracy: true,
+            timeout: 20000,
+            maximumAge: 2000
+          }
+        ),setModalRun(true)
+      } else {
+        alert("Não foi possível acessar sua localização.");
+      }
+    } catch (err) {
+      console.warn(err);
+    }
+  };  
+
     return(
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -80,7 +128,7 @@ export default function Home(){
           </RunPanel>
         </RunContainer>
 
-        <ButtonInit onPress={() => setModalRun(true)}>
+        <ButtonInit onPress={() => openRunPanel()}>
           <ButtonInitText>INICIAR CORRIDA</ButtonInitText>
         </ButtonInit>
       
